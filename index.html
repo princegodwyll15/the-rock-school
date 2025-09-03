@@ -38,81 +38,41 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
         }
-
-        /* Animation Styles */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-in-up {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scale-in {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .animate-on-scroll.scale-in-initial {
-            opacity: 0;
-            transform: scale(0.95);
-        }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+<body class="bg-gray-50 text-gray-800">
 
     <!-- Header Section -->
-    <header class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-colors duration-500">
+    <header class="bg-white shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-gray-900 dark:text-gray-50 flex items-center gap-2">
+            <a href="#home" class="text-2xl font-bold text-gray-900 flex items-center gap-2">
                 <i class="fas fa-school text-indigo-600"></i> The Rock School
             </a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 smooth-scroll">About
-                    Us</a>
-                <a href="#academics"
-                    class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 smooth-scroll">Academics</a>
-                <a href="#admissions"
-                    class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 smooth-scroll">Admissions</a>
-                <a href="#extracurricular"
-                    class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 smooth-scroll">Activities</a>
-                <a href="#gallery"
-                    class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 smooth-scroll">Gallery</a>
-                <a href="#contact"
-                    class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 smooth-scroll">Contact</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 smooth-scroll">About Us</a>
+                <a href="#academics" class="text-gray-600 hover:text-indigo-600 smooth-scroll">Academics</a>
+                <a href="#admissions" class="text-gray-600 hover:text-indigo-600 smooth-scroll">Admissions</a>
+                <a href="#extracurricular" class="text-gray-600 hover:text-indigo-600 smooth-scroll">Activities</a>
+                <a href="#gallery" class="text-gray-600 hover:text-indigo-600 smooth-scroll">Gallery</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 smooth-scroll">Contact</a>
             </div>
-            <!-- Mobile Menu Button and Theme Toggle -->
-            <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 focus:outline-none">
-                    <i id="theme-icon" class="fas text-xl"></i>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
                 </button>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-white dark:bg-gray-800 shadow-inner pb-4 transition-colors duration-500">
-            <a href="#about"
-                class="block px-6 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 smooth-scroll">About
-                Us</a>
-            <a href="#academics"
-                class="block px-6 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 smooth-scroll">Academics</a>
-            <a href="#admissions"
-                class="block px-6 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 smooth-scroll">Admissions</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner pb-4">
+            <a href="#about" class="block px-6 py-2 text-gray-600 hover:bg-gray-100 smooth-scroll">About Us</a>
+            <a href="#academics" class="block px-6 py-2 text-gray-600 hover:bg-gray-100 smooth-scroll">Academics</a>
+            <a href="#admissions" class="block px-6 py-2 text-gray-600 hover:bg-gray-100 smooth-scroll">Admissions</a>
             <a href="#extracurricular"
-                class="block px-6 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 smooth-scroll">Activities</a>
-            <a href="#gallery"
-                class="block px-6 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 smooth-scroll">Gallery</a>
-            <a href="#contact"
-                class="block px-6 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 smooth-scroll">Contact</a>
+                class="block px-6 py-2 text-gray-600 hover:bg-gray-100 smooth-scroll">Activities</a>
+            <a href="#gallery" class="block px-6 py-2 text-gray-600 hover:bg-gray-100 smooth-scroll">Gallery</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-gray-100 smooth-scroll">Contact</a>
         </div>
     </header>
 
@@ -134,19 +94,17 @@
                 </a>
             </div>
         </section>
-        <hr class="my-12 border-t-2 border-indigo-200 w-1/4 mx-auto dark:border-indigo-800" />
 
         <!-- About Us Section -->
-        <section id="about" class="py-16 sm:py-24 animate-on-scroll" data-animation="fade-in-up">
+        <section id="about" class="py-16 sm:py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-50">About Us
-                </h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">About Us</h2>
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="w-full lg:w-1/2">
                         <img src="https://placehold.co/600x400/1e293b/ffffff?text=Our+Campus"
                             alt="The Rock School Campus" class="rounded-xl shadow-lg w-full h-auto object-cover">
                     </div>
-                    <div class="w-full lg:w-1/2 text-gray-600 dark:text-gray-300">
+                    <div class="w-full lg:w-1/2 text-gray-600">
                         <p class="mb-6 leading-relaxed">
                             Established in 1985, The Rock Junior High School has a proud tradition of academic
                             excellence and holistic development. Our mission is to provide a comprehensive education
@@ -166,78 +124,72 @@
         </section>
 
         <!-- Academics Section -->
-        <section id="academics" class="bg-gray-100 dark:bg-gray-900 py-16 sm:py-24 animate-on-scroll"
-            data-animation="fade-in-up">
+        <section id="academics" class="bg-gray-100 py-16 sm:py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-50">Our
-                    Academic Programs</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Our Academic Programs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Academic Program Cards -->
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-graduation-cap text-indigo-600 text-4xl mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-50">Comprehensive Curriculum
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-300">Our curriculum is designed to meet national
-                            standards while challenging students to think critically and creatively across all subjects.
-                        </p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Comprehensive Curriculum</h3>
+                        <p class="text-gray-600">Our curriculum is designed to meet national standards while challenging
+                            students to think critically and creatively across all subjects.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-flask text-indigo-600 text-4xl mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-50">STEM Focus</h3>
-                        <p class="text-gray-600 dark:text-gray-300">We offer specialized programs in Science,
-                            Technology, Engineering, and Mathematics with hands-on learning experiences.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">STEM Focus</h3>
+                        <p class="text-gray-600">We offer specialized programs in Science, Technology, Engineering, and
+                            Mathematics with hands-on learning experiences.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-book-open text-indigo-600 text-4xl mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-50">Literacy & Arts</h3>
-                        <p class="text-gray-600 dark:text-gray-300">We place a strong emphasis on literacy, reading
-                            comprehension, and creative expression through our arts and humanities classes.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Literacy & Arts</h3>
+                        <p class="text-gray-600">We place a strong emphasis on literacy, reading comprehension, and
+                            creative expression through our arts and humanities classes.</p>
                     </div>
                 </div>
 
                 <!-- Daily Class Schedule -->
-                <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg animate-on-scroll"
-                    data-animation="fade-in-up">
-                    <h3 class="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-gray-50">Daily Class Schedule
-                    </h3>
-                    <div class="space-y-4 text-gray-600 dark:text-gray-300">
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">7:30 AM - 8:00 AM</span>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-gray-900">Daily Class Schedule</h3>
+                    <div class="space-y-4 text-gray-600">
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">7:30 AM - 8:00 AM</span>
                             <span>Morning Assembly</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">8:00 AM - 9:00 AM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">8:00 AM - 9:00 AM</span>
                             <span>Mathematics Class</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">9:00 AM - 10:00 AM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">9:00 AM - 10:00 AM</span>
                             <span>English Language</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">10:00 AM - 10:30 AM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">10:00 AM - 10:30 AM</span>
                             <span>Break</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">10:30 AM - 11:30 AM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">10:30 AM - 11:30 AM</span>
                             <span>Integrated Science</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">11:30 AM - 12:30 PM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">11:30 AM - 12:30 PM</span>
                             <span>Social Studies</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">12:30 PM - 1:30 PM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">12:30 PM - 1:30 PM</span>
                             <span>Lunch</span>
                         </div>
-                        <div class="flex justify-between items-center border-b pb-2 dark:border-gray-700">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">1:30 PM - 2:30 PM</span>
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-900">1:30 PM - 2:30 PM</span>
                             <span>Creative Arts</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="font-semibold text-gray-900 dark:text-gray-50">2:30 PM - 3:00 PM</span>
+                            <span class="font-semibold text-gray-900">2:30 PM - 3:00 PM</span>
                             <span>Extra-Curricular Activities</span>
                         </div>
                     </div>
@@ -246,21 +198,19 @@
         </section>
 
         <!-- Admissions Section -->
-        <section id="admissions" class="py-16 sm:py-24 animate-on-scroll" data-animation="fade-in-up">
+        <section id="admissions" class="py-16 sm:py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-50">Admissions
-                </h2>
-                <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-8 sm:p-12 rounded-xl shadow-lg">
-                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-center leading-relaxed">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Admissions</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-lg">
+                    <p class="text-gray-600 mb-6 text-center leading-relaxed">
                         We welcome students who are eager to learn and contribute to our vibrant community. Our
                         admission process is designed to be straightforward and supportive.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                         <div>
-                            <h3
-                                class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-50 flex items-center gap-2">
-                                <i class="fas fa-file-alt text-indigo-600"></i> Requirements</h3>
-                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center gap-2"><i
+                                    class="fas fa-file-alt text-indigo-600"></i> Requirements</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
                                 <li>Completed application form</li>
                                 <li>Academic transcripts</li>
                                 <li>Standardized test scores</li>
@@ -268,10 +218,9 @@
                             </ul>
                         </div>
                         <div>
-                            <h3
-                                class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-50 flex items-center gap-2">
-                                <i class="fas fa-calendar-alt text-indigo-600"></i> Key Dates</h3>
-                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                            <h3 class="text-xl font-semibold mb-4 text-gray-900 flex items-center gap-2"><i
+                                    class="fas fa-calendar-alt text-indigo-600"></i> Key Dates</h3>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
                                 <li>Application Deadline: March 15th</li>
                                 <li>Decision Notifications: April 30th</li>
                                 <li>Enrollment Deadline: May 15th</li>
@@ -289,105 +238,86 @@
         </section>
 
         <!-- Extracurricular Activities Section -->
-        <section id="extracurricular" class="bg-gray-100 dark:bg-gray-900 py-16 sm:py-24 animate-on-scroll"
-            data-animation="fade-in-up">
+        <section id="extracurricular" class="bg-gray-100 py-16 sm:py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-50">
-                    Extracurricular Activities</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Extracurricular Activities
+                </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-futbol text-indigo-600 text-3xl mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Sports</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Basketball, soccer, volleyball, and track and field.
-                        </p>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-900">Sports</h3>
+                        <p class="text-gray-600">Basketball, soccer, volleyball, and track and field.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-book-reader text-indigo-600 text-3xl mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Clubs</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Debate, robotics, chess, and environmental clubs.
-                        </p>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-900">Clubs</h3>
+                        <p class="text-gray-600">Debate, robotics, chess, and environmental clubs.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-theater-masks text-indigo-600 text-3xl mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">Performing Arts</h3>
-                        <p class="text-600 dark:text-gray-300">Drama club, choir, and school band.</p>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-900">Performing Arts</h3>
+                        <p class="text-gray-600">Drama club, choir, and school band.</p>
                     </div>
-                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
                         <i class="fas fa-cogs text-indigo-600 text-3xl mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-2 text-gray-900 dark:text-gray-50">STEM Activities</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Coding club, science fair, and engineering projects.
-                        </p>
+                        <h3 class="text-lg font-semibold mb-2 text-gray-900">STEM Activities</h3>
+                        <p class="text-gray-600">Coding club, science fair, and engineering projects.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="py-16 sm:py-24 animate-on-scroll" data-animation="fade-in-up">
+        <section id="gallery" class="py-16 sm:py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-50">Gallery
-                </h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Gallery</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=School+Play" alt="School Play"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Science+Fair" alt="Science Fair"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Sports+Day" alt="Sports Day"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Classroom" alt="Classroom"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Library" alt="Library"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Field+Trip" alt="Field Trip"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Art+Class" alt="Art Class"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                     <img src="https://placehold.co/400x300/e2e8f0/ffffff?text=Robotics+Club" alt="Robotics Club"
-                        class="rounded-lg shadow-md w-full h-auto object-cover animate-on-scroll scale-in-initial"
-                        data-animation="scale-in">
+                        class="rounded-lg shadow-md w-full h-auto object-cover">
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="bg-gray-100 dark:bg-gray-900 py-16 sm:py-24 animate-on-scroll"
-            data-animation="fade-in-up">
+        <section id="contact" class="bg-gray-100 py-16 sm:py-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-50">Get in
-                    Touch</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Get in Touch</h2>
                 <div
-                    class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 sm:p-12 rounded-xl shadow-lg flex flex-col md:flex-row gap-12">
+                    class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-lg flex flex-col md:flex-row gap-12">
                     <div class="md:w-1/2">
                         <form action="#" method="POST" class="space-y-6">
                             <div>
-                                <label for="name"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Full Name</label>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
                                 <input type="text" id="name" name="name"
-                                    class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border">
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border">
                             </div>
                             <div>
-                                <label for="email"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email
-                                    Address</label>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
                                 <input type="email" id="email" name="email"
-                                    class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border">
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border">
                             </div>
                             <div>
-                                <label for="message"
-                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
                                 <textarea id="message" name="message" rows="4"
-                                    class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border"></textarea>
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2 border"></textarea>
                             </div>
                             <button type="submit"
                                 class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-full hover:bg-indigo-700 transition-transform transform hover:scale-105">
@@ -396,14 +326,14 @@
                         </form>
                     </div>
                     <div class="md:w-1/2">
-                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-50">Our Location</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Our Location</h3>
+                        <p class="text-gray-600 mb-4">
                             Darkuman, Opposite Police Station, Accra, Ghana
                         </p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        <p class="text-gray-600 mb-4">
                             <i class="fas fa-phone mr-2 text-indigo-600"></i> +233 55 555 5555
                         </p>
-                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <p class="text-gray-600 mb-6">
                             <i class="fas fa-envelope mr-2 text-indigo-600"></i> info@rockschool.edu.gh
                         </p>
                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
@@ -434,7 +364,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for smooth scrolling, mobile menu, and animations -->
+    <!-- JavaScript for smooth scrolling and mobile menu -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth scroll for navigation links
@@ -471,63 +401,6 @@
 
             updateSchoolStatus(); // Initial call
             setInterval(updateSchoolStatus, 60000); // Update every minute
-
-            // Intersection Observer for scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const animationType = entry.target.getAttribute('data-animation');
-                        if (animationType === 'fade-in-up') {
-                            entry.target.classList.add('fade-in-up');
-                        } else if (animationType === 'scale-in') {
-                            entry.target.classList.add('scale-in');
-                        }
-                        observer.unobserve(entry.target); // Stop observing after animation
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
-
-            // Find all elements to animate and observe them
-            document.querySelectorAll('[data-animation]').forEach(element => {
-                observer.observe(element);
-            });
-
-            // Dark/Light Mode Toggle
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
-            const html = document.documentElement;
-
-            function updateTheme(theme) {
-                if (theme === 'dark') {
-                    html.classList.add('dark');
-                    themeIcon.classList.remove('fa-sun');
-                    themeIcon.classList.add('fa-moon');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    html.classList.remove('dark');
-                    themeIcon.classList.remove('fa-moon');
-                    themeIcon.classList.add('fa-sun');
-                    localStorage.setItem('theme', 'light');
-                }
-            }
-
-            // Initial theme setup
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                updateTheme(savedTheme);
-            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                updateTheme('dark');
-            } else {
-                updateTheme('light');
-            }
-
-            // Event listener for the toggle button
-            themeToggleBtn.addEventListener('click', () => {
-                const currentTheme = html.classList.contains('dark') ? 'light' : 'dark';
-                updateTheme(currentTheme);
-            });
         });
     </script>
 </body>
