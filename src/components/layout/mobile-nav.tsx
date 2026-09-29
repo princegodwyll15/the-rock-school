@@ -10,7 +10,7 @@ interface MobileMenuProps {
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (
     <div
-      className={`mobile-nav fixed inset-0 z-500 flex flex-col p-6 transition-transform duration-300 ease-in-out lg:hidden ${
+      className={`fixed inset-0 z-500 flex flex-col overflow-y-auto p-6 transition-transform duration-300 ease-in-out lg:hidden ${
         open ? "translate-x-0" : "translate-x-full"
       }`}
       style={{
