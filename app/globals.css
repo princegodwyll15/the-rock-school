@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+
+
 @theme {
   /* ── Colors (generate text-primary, bg-accent-light, etc.) ── */
   --color-primary: #1a3a6b;
@@ -8,6 +10,7 @@
   --color-accent-light: #f5b04a;
   --color-surface: #f8fafc;
   --shadow-card: 0 4px 24px rgba(26, 58, 107, 0.1);
+  --color-surface-alt: #eef2f7;
   --shadow-hover: 0 12px 40px rgba(26, 58, 107, 0.16);
   --color-text: #1f2937;
   --color-text-muted: #6b7280;

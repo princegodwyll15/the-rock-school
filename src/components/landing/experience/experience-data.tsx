@@ -28,7 +28,7 @@ export const EXPERIENCES: Experience[] = [
     desc: "Our curriculum challenges students to think critically, solve problems creatively and build mastery in every subject.",
   },
   {
-    img: IMAGES.student_drawing,
+    img: IMAGES.culture,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path
@@ -45,7 +45,7 @@ export const EXPERIENCES: Experience[] = [
     desc: "From drawing to music and drama, we nurture creativity as a core part of a balanced education.",
   },
   {
-    img: IMAGES.soccer,
+    img: IMAGES.sports_team,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <circle

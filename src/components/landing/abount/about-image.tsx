@@ -6,7 +6,7 @@ export function AboutImage() {
     <div className="relative">
       <div className="aspect-4/5 overflow-hidden rounded-[20px] shadow-card">
         <Image
-          src={IMAGES.classroom}
+          src={IMAGES.about}
           alt="Students learning in a classroom"
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"

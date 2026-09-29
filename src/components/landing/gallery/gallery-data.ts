@@ -9,36 +9,77 @@ export interface GalleryItem {
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     img: IMAGES.classroom,
-    alt: "Students in classroom",
+    alt: "Preschool pupils raising their hands in class",
     category: "Classroom",
   },
   {
-    img: IMAGES.student_drawing,
-    alt: "Student drawing with ruler",
+    img: IMAGES.preschool_group,
+    alt: "Preschool pupils gathered for a school activity",
     category: "Classroom",
   },
-  { img: IMAGES.soccer, alt: "Student with soccer ball", category: "Sports" },
-  { img: IMAGES.running, alt: "Students running", category: "Activities" },
   {
-    img: IMAGES.graduation_solo,
-    alt: "Graduate in academic gown",
-    category: "Events",
+    img: IMAGES.sports_team,
+    alt: "School football team on the sports field",
+    category: "Sports",
+  },
+  {
+    img: IMAGES.sports_activity,
+    alt: "Pupils taking part in an outdoor sports activity",
+    category: "Sports",
   },
   {
     img: IMAGES.graduation_group,
-    alt: "Group of graduates",
+    alt: "Graduating pupils together in blue gowns",
     category: "Events",
   },
-  { img: IMAGES.graduation_girl, alt: "Graduate student", category: "Events" },
   {
-    img: IMAGES.graduates_celebrate,
-    alt: "Graduates celebrating",
+    img: IMAGES.culture,
+    alt: "Pupils posing in traditional Ghanaian clothing",
     category: "Events",
   },
-  { img: IMAGES.boys_soccer, alt: "Boys playing soccer", category: "Sports" },
   {
-    img: IMAGES.children_running,
-    alt: "Children running",
+    img: IMAGES.cadets,
+    alt: "School cadets standing in formation",
+    category: "Activities",
+  },
+  {
+    img: IMAGES.career_day,
+    alt: "Pupils dressed as a pilot and a healthcare worker",
+    category: "Activities",
+  },
+  {
+    img: IMAGES.preschool_activity,
+    alt: "Preschool pupils beside classroom activity displays",
+    category: "Classroom",
+  },
+  {
+    img: IMAGES.sports_coaching,
+    alt: "Pupils gathered with their coach on the field",
+    category: "Sports",
+  },
+  {
+    img: IMAGES.sports_group,
+    alt: "Pupils and staff posing together at a sports event",
+    category: "Sports",
+  },
+  {
+    img: IMAGES.graduation_award,
+    alt: "Graduate receiving a certificate on stage",
+    category: "Events",
+  },
+  {
+    img: IMAGES.cultural_procession,
+    alt: "Pupils parading in traditional clothing",
+    category: "Events",
+  },
+  {
+    img: IMAGES.career_group,
+    alt: "Pupils wearing career day costumes",
+    category: "Activities",
+  },
+  {
+    img: IMAGES.dance,
+    alt: "Pupils performing a dance in the school courtyard",
     category: "Activities",
   },
 ];

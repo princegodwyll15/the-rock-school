@@ -1,6 +1,8 @@
 "use client";
 
 import { scrollToSection } from "./nav-links";
+import Image from "next/image";
+import { IMAGES } from "@/lib/images";
 
 interface LogoProps {
   scrolled: boolean;
@@ -15,20 +17,12 @@ export function Logo({ scrolled, dark = false }: LogoProps) {
       aria-label="Go to home"
     >
       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-linear-to-br from-[#1A3A6B] to-[#2954A3] shadow-[0_2px_12px_rgba(26,58,107,0.25)]">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-          <path
-            d="M13 3L3 8.5V13C3 18.25 7.4 23.15 13 24.5C18.6 23.15 23 18.25 23 13V8.5L13 3Z"
-            fill="white"
-            fillOpacity="0.9"
-          />
-          <path
-            d="M10 13L12.5 15.5L17 11"
-            stroke="#E8961E"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <Image
+          src={IMAGES.crest}
+          alt="The Rock School Crest"
+          width={26}
+          height={26}
+        />
       </div>
 
       <div className="text-left">
@@ -44,7 +38,7 @@ export function Logo({ scrolled, dark = false }: LogoProps) {
             scrolled || dark ? "text-text-muted" : "text-white/75"
           }`}
         >
-          Building Strong Foundations
+          IN GOD WE TRUST
         </div>
       </div>
     </button>
